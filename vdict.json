@@ -1,0 +1,34 @@
+{
+	"choose":
+	[
+		"choose",
+		"pick",
+		"take",
+		"get",
+		"collect"
+	],
+	"open":
+	[
+		"open",
+		"unlock"
+	],
+	"go":
+	[
+		"move",
+		"go",
+		"proceed",
+		"walk"
+	],
+	"look":
+	[
+		"look",
+		"peek",
+		"inspect",
+		"watch"
+	],
+	"use":
+	[
+		"use",
+		"apply"
+	]
+}

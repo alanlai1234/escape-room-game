@@ -1,0 +1,26 @@
+{
+	"left":
+	[
+		"left",
+		"west"
+	],
+	"right":
+	[
+		"right",
+		"east"
+	],
+	"paper":"paper",
+	"table":"table",
+	"shelf": "shelf",
+	"pen":"pen",
+	"front":
+	[
+		"front",
+		"forward",
+		"straight"
+	],
+	"key": "key",
+	"door": "door",
+	"note": "note",
+	"board": "board"
+}
