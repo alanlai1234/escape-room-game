@@ -24,7 +24,8 @@
 		"look",
 		"peek",
 		"inspect",
-		"watch"
+		"watch",
+		"read"
 	],
 	"use":
 	[

@@ -46,21 +46,23 @@ int parse(string& bf, vector<option> &acts){
 	vector<string> split;
 	boost::split(split, bf, boost::is_any_of(" "));
 	vector<int> find_list;
-	int ans, vflag=0, nflag=0;
+	int ans=-2, vflag=0, nflag=0;
 
 	for(auto i:split){
 		//verb
-		cout << ans << "\n";
 		if(!vflag){
+			// find matching key word
 			auto v_get=vd.find(i);
 
 			if(v_get!=vd.end()){
+				// iterate all possible actions
 				for(int ind=0;ind<acts.size();++ind){
 					if(acts[ind].v==v_key[v_get->second]){
 						if(!nflag){
 							find_list.push_back(ind);
 							vflag=1;
 						}
+						// if a noun already found, search if the verb is the same action
 						else if(search(find_list, ind)){
 							vflag=1;
 							ans=ind;
@@ -94,7 +96,8 @@ int parse(string& bf, vector<option> &acts){
 		}
 	}
 
-	if(find_list.size()==0 && (!vflag || !nflag))
+	//printf("%d %d %d\n", ans, vflag, nflag);
+	if(find_list.empty() || !(vflag && nflag))
 		return -1;
 
 	return ans;
